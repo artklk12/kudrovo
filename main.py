@@ -41,7 +41,7 @@ def get_content(links):
     all_cards = []
     i = 1
     for link in links:
-        r = requests.get(link, headers=headers)
+        r = requests.get(url=link, headers=headers)
         src = r.text
         soup = BeautifulSoup(src, "lxml")
 
