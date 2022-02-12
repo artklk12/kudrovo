@@ -102,7 +102,7 @@ def main():
     # print(f"Итоговое время {time.time() - start_time}")
 
 
-schedule.every().day.at("23:25").do(main)
+schedule.every().day.at("23:33").do(main)
 
 
 while True:
