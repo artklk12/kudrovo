@@ -83,7 +83,9 @@ def get_content(links):
 
         # print (f"Выполнил страницу {i}/{len(links)}")
         i += 1
-
+        
+        time.sleep(3)
+    
     with open(f"all_cards.json", "w", encoding="utf-8") as file:
         json.dump(all_cards, file, indent=4, ensure_ascii=False)
 
