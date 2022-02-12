@@ -1,4 +1,5 @@
 import requests
+import schedule
 from bs4 import BeautifulSoup
 import json
 import time
@@ -101,5 +102,8 @@ def main():
     # print(f"Итоговое время {time.time() - start_time}")
 
 
-if __name__ == "__main__":
-    main()
+schedule.every().day.at("23:25").do(main)
+
+
+while True:
+    schedule.run_pending()
